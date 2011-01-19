@@ -1,0 +1,35 @@
+<div class="content">
+
+    <h2>Meet the Team Behind Pluggy</h2>
+    <h3><br /></h3>
+
+
+    <div class="large-text space-bottom">
+        
+        <p>We have over 170 employees, last time we checked.  Below are many of them who wanted to share with you why they decided to work at OPOWER.</p>
+
+        <p>I work at OPOWER because&hellip;</p>
+    </div>
+    
+    <div class="the-team">
+    <%
+        for (var i = 0; i < data.team.length; i++) {
+            var member = data.team[i];
+    %>
+        <div class="team-member">
+          <img class="photo" src="/photos/meet-the-team/<%= member.img_1 %>" 
+            <% if (member.img_2) { %>swap="/photos/meet-the-team/<%= member.img_2 %>"<% } %>
+          >
+          <div class="name"><%= member.first_name %></div>
+          <div class="reason">
+              <div class="reason-text"><%= member.reason %>
+              <div class="byline"><%= member.first_name %> <%= member.last_name %></div>
+              <div class="byline"><%= member.dept %>, <%= member.location %></div>
+            </div>
+          </div>
+        </div>
+    <%
+        }
+    %>
+    </div>
+</div>

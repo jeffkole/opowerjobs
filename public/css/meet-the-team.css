@@ -1,0 +1,46 @@
+.the-team {
+    padding-left: 10px;
+}
+
+.team-member {
+    position: relative;
+    float: left;
+    width: 100px;
+    margin-right: 30px
+}
+
+.team-member .photo {
+    
+}
+
+.team-member .name {
+    text-align: center;
+}
+
+.team-member .reason {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    width: 240px;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #000;
+    /* for IE */
+    filter:alpha(opacity=60);
+    /* CSS3 standard */
+    opacity:0.6;
+}
+
+.team-member .reason .reason-text {
+    color: #fff;
+    /* for IE */
+    filter:alpha(opacity=100);
+    /* CSS3 standard */
+    opacity:1.0;
+}
+
+.team-member .reason .reason-text .byline {
+    text-align: right;
+    font-size: 80%
+}
