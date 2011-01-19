@@ -13,11 +13,21 @@
     
     <div class="the-team">
     <%
+        data.team.sort(function(a, b) {
+            // Where the hell is the <=> operator in JS?
+            if (a.first_name < b.first_name) {
+                return -1;
+            }
+            if (a.first_name > b.first_name) {
+                return 1;
+            }
+            return 0;
+        });
         for (var i = 0; i < data.team.length; i++) {
             var member = data.team[i];
     %>
         <div class="team-member">
-          <img class="photo" src="/photos/meet-the-team/<%= member.img_1 %>" 
+          <img class="photo" width="100" height="100" src="/photos/meet-the-team/<%= member.img_1 %>" 
             <% if (member.img_2) { %>swap="/photos/meet-the-team/<%= member.img_2 %>"<% } %>
           >
           <div class="name"><%= member.first_name %></div>
