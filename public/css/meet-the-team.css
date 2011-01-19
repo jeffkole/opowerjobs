@@ -20,16 +20,16 @@
 .team-member .reason {
     display: none;
     position: absolute;
-    left: 20px;
-    top: 80px;
+    left: 10px;
+    top: 90px;
     width: 240px;
     padding: 10px;
     z-index: 1000;
     background-color: #000;
     /* for IE */
-    filter:alpha(opacity=60);
+    filter:alpha(opacity=80);
     /* CSS3 standard */
-    opacity:0.6;
+    opacity:0.8;
 }
 
 .team-member .reason .reason-text {
